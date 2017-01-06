@@ -1,0 +1,39 @@
+<?php
+/**
+ * N2Dev_TwitterFeed
+ *
+ * @category    TwitterFeed
+ * @package     N2Dev_TwitterFeed
+ * @copyright   Copyright (c) 2017 nodwell.net
+ * @author      jennifer@nodwell.net
+ */
+
+?>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="block twitterblock">
+<a class="twitter-timeline" data-width="<?php
+echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedDataWidth(); ?>" data-link-color="<?php
+echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedLinkColor(); ?>" data-height="<?php
+echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedDataHeight(); ?>" data-theme="<?php
+echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedDataTheme(); ?>" href="https://twitter.com/<?php
+echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedFollowid(); ?>">Tweets by <?php
+    echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedFollowid(); ?></a>
+
+    <?php if ($this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedShowButton()) { ?>
+<a class="twitter-follow-button" data-size="<?php
+echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedButtonDataSize(); ?>" data-show-screen-name="<?php
+echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedButtonDataShowScreenname(); ?>" data-show-count="<?php
+echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedButtonDataShowCount(); ?>" href="https://twitter.com/<?php
+echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedFollowid(); ?>">Follow <?php
+    echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedFollowid(); ?></a>
+    <?php } ?>
+    <?php if ($this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedMentionShow()) { ?>
+        <a class="twitter-mention-button" data-size="<?php
+        echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedMentionDataSize(); ?>" data-text="<?php
+        echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedMentionPrefill(); ?>" data-related="<?php
+        echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedMentionRelated(); ?>" data-show-count="<?php
+        echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedButtonDataShowCount(); ?>" href="https://twitter.com/intent/tweet?screen_name=<?php
+        echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedFollowid(); ?>">Tweet to <?php
+            echo $this->helper('N2Dev\TwitterFeed\Helper\Data')->getTwitterFeedFollowid(); ?></a>
+    <?php } ?>
+</div>

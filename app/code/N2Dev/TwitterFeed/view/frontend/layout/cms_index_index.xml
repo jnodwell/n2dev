@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * N2Dev_TwitterFeed
+ *
+ * @category    TwitterFeed
+ * @package     N2Dev_TwitterFeed
+ * @copyright   Copyright (c) 2017 nodwell.net
+ * @author      jennifer@nodwell.net
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="footer">
+            <block class="N2Dev\TwitterFeed\Block\TwitterBlock" name="twitterblock" as="twitterblock"
+                   template="N2Dev_TwitterFeed::twitterblock.phtml" />
+        </referenceContainer>
+    </body>
+</page>

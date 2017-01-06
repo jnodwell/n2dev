@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * N2Dev_TwitterFeed
+ *
+ * @category    TwitterFeed
+ * @package     N2Dev_TwitterFeed
+ * @copyright   Copyright (c) 2017 nodwell.net
+ * @author      jennifer@nodwell.net
+ */
+-->
+ <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <n2dev_twitterfeed>
+            <twitterfeed_settings>
+                <followid>nodwelldotnet</followid>
+                <datawidth>350</datawidth>
+                <dataheight>600</dataheight>
+                <color>light</color>
+                <link_color>#3B94D9</link_color>
+            </twitterfeed_settings>
+            <twitterfeed_button>
+                <showbutton>true</showbutton>
+                <datasize>large</datasize>
+                <datashowscreen>true</datashowscreen>
+                <datashowcount>false</datashowcount>
+            </twitterfeed_button>
+            <twitterfeed_mention>
+                <showbutton>true</showbutton>
+                <mentionsize>large</mentionsize>
+                <prefill>Hey, @nodwelldotnet </prefill>
+                <rec_one></rec_one>
+                <rec_two></rec_two>
+            </twitterfeed_mention>
+        </n2dev_twitterfeed>
+    </default>
+</config>
