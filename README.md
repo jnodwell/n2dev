@@ -11,5 +11,14 @@ magento 2 extensions
 <li>run php bin/magento setup:static-content:deploy</li>
 </ul>
 <p>Change the pubid from Stores -> Configuration -> N2Dev -> Add This Pubid</p>
+<h3>TwitterFeed</h3>
+<p>TwitterFeed - add the Twitter feed for a select twitter handle below the newsletter signup block.</p>
+<ul>
+<li>add the /N2Dev/TwitterFeed folder and its subfolders to /app/code in your magento installation</li>
+<li>run php bin/magento module:enable N2Dev_AddThis</li>
+<li>run php bin/magento setup:upgrade</li>
+<li>run php bin/magento setup:static-content:deploy</li>
+</ul>
+<p>Change the pubid from Stores -> Configuration -> N2Dev -> Twitter Feed</p>
 
 
