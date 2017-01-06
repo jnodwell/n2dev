@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * N2Dev_AddThis
+ *
+ * @category  N2Dev
+ * @package   N2Dev_AddThis
+ * @copyright Copyright (c) 2017 nodwell.net (www.nodwell.net)
+ * @author    jennifer@nodwell.net
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="n2dev" translate="label" sortOrder="250">
+            <label>N2Dev</label>
+        </tab>
+        <section id="n2dev_addthis" translate="label" type="text"
+                 sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Add This Pubid</label>
+            <tab>n2dev</tab>
+            <resource>N2Dev_AddThis::config_pubid</resource>
+
+            <group id="addthis_pubid" translate="label" type="text"
+                   sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Add This Settings</label>
+                <field id="pubid" translate="label"
+                       type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pubid</label>
+                    <comment>Go to www.addthis.com/dashboard to customize your tools</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
