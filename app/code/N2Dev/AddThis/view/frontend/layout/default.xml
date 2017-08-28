@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * N2Dev_AddThis
+ *
+ * @category  N2Dev
+ * @package   N2Dev_AddThis
+ * @copyright Copyright (c) 2017 nodwell.net (www.nodwell.net)
+ * @author    jennifer@nodwell.net
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="before.body.end">
+            <block class="N2Dev\AddThis\Block\Head" name="addthis.head" as="addthis.head"
+                   template="N2Dev_AddThis::head.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

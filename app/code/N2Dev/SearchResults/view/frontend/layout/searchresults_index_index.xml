@@ -1,0 +1,20 @@
+<?xml version="1.0"?><!--
+/**
+ * N2Dev_SearchResults
+ *
+ * @category    N2Dev
+ * @package     N2Dev_SearchResults
+ * @copyright   Copyright (c) 2016 N2Devinc.com
+ * @author      jennifer@nodwell.net
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:view/Layout/etc/page_configuration.xsd" layout="1column">
+    <body>
+        <referenceContainer name="content">
+            <block class="N2Dev\SearchResults\Block\Form"
+                   name="rfqform"
+                   template="N2Dev_SearchResults::form.phtml" />
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,13 @@
+<?php
+/**
+ * head.phtml
+ *
+ * @category  N2Dev
+ * @package   N2Dev_AddThis
+ * @copyright Copyright (c) 2017 nodwell.net (www.nodwell.net)
+ * @author    jennifer@nodwell.net
+ */
+?>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php
+echo $this->helper('N2Dev\AddThis\Helper\Data')->getAddThisPubid(); ?>"></script>

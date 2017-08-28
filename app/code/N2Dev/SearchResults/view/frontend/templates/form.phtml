@@ -1,0 +1,99 @@
+<?php
+/**
+ * form.phtml
+ *
+ * @category  N2Dev
+ * @package   N2Dev_SearchResults
+ *
+ * @copyright Copyright (c) 2017 jennifer nodwell (nodwell.net)
+ * @author    jennifer@nodwell.net
+ */
+$helper = $block->getDataHelper();
+?>
+<div class="rfq-form">
+    <div class="rfq-form-header">
+        <?php $helper->getConfig('N2Dev_SearchResults/SearchResults_form/header'); ?>
+    </div>
+
+<form class="form" action="<?php echo $block->getFormAction() ?>" method="post">
+    <?php
+    $skulist = $block->getSkuList();
+    if (!empty($skulist)) { ?>
+    <table class="rfq-table">
+        <tbody>
+        <tr>
+            <th class="rfq-header">Part #</th>
+            <th class="rfq-header">Quantity</th>
+            <th class="rfq-header">Price</th>
+            <th class="rfq-header">Price Extended</th>
+            <th class="rfq-header">Delete</th>
+        </tr>
+        <?php
+        foreach ($skulist as $lineitem) {
+        $qty = $lineitem['qty'];
+        $sku = $lineitem['sku'];
+        ?>
+        <tr>
+            <td class="rfq-body"><?php echo $sku; ?></td>
+            <td class="rfq-body"><?php echo $qty; ?></td>
+            <td class="rfq-body">N/A</td>
+            <td class="rfq-body">N/A</td>
+            <td class="rfq-body"><input type="checkbox" value="<?php echo $sku; ?>" name="checkbox[]"></td>
+        </tr>
+     <?php
+        }
+    ?>
+    </tbody>
+</table>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" class="action submit primary" title="<?php /* @escapeNotVerified */
+                echo __('Delete Checked Rows') ?>">
+            <span><?php /* @escapeNotVerified */
+                echo __('Delete Checked Rows') ?></span>
+                </button>
+            </div>
+        </div>
+<?php } ?>
+
+    <fieldset class=" fieldset">
+            <legend class="legend"><span><?php /* @escapeNotVerified */
+                    echo __('RFQ Form') ?></span></legend>
+            <br>
+            <div class="field required">
+                <label for="sku" class="label">
+            <span><?php /* @escapeNotVerified */
+                echo __('Part #') ?></span>
+                </label>
+
+                <div class="control">
+                    <input type="text" id="sku"
+                           name="sku"
+                           class="input-text">
+                </div>
+            </div>
+            <div class="field required">
+                <label for="qty" class="label">
+            <span><?php /* @escapeNotVerified */
+                echo __('Quantity') ?></span>
+                </label>
+
+                <div class="control">
+                    <input type="text" id="qty"
+                           name="qty"
+                           class="input-text">
+                </div>
+            </div>
+    </fieldset>
+
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <button type="submit" class="action submit primary" title="<?php /* @escapeNotVerified */
+                    echo __('Add To List') ?>">
+            <span><?php /* @escapeNotVerified */
+                echo __('Add To List') ?></span>
+                    </button>
+                </div>
+            </div>
+</form>
+    </div>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * N2Dev_SearchResults
+ *
+ * @category    N2Dev
+ * @package     N2Dev_SearchResults
+ * @copyright   Copyright (c) 2016 N2Devinc.com
+ * @author      jennifer@nodwell.net
+ */
+-->
+ <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <N2Dev_SearchResults>
+            <SearchResults_form>
+                <header>Below is a list of items to be requested for quote. To modify your list, enter new quantities click update. To add another item directly to the list, enter the part number below and click 'Add to List'.</header>
+            </SearchResults_form>
+        </N2Dev_SearchResults>
+    </default>
+</config>
